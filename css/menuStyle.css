@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1542751371-adc38448a05e') no-repeat center center/cover;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+/* Overlay suave */
+.overlay {
+    background: rgba(0, 0, 0, 0.4);
+    min-height: 100vh;
+}
+
+/* Banner superior */
+#topBar {
+    background: rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    padding: 20px 30px;
+    /* 👈 más espacio */
+    min-height: 80px;
+    /* 👈 altura mínima */
+}
+
+#username {
+    color: #00ffff;
+}
+
+#logoutBtn {
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    color: #00ffff;
+    background: transparent;
+}
+
+#logoutBtn:hover {
+    background: rgba(0, 255, 255, 0.2);
+}
+
+/* Cards del menú */
+.menu-card {
+    background: rgba(20, 20, 20, 0.6);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.menu-title {
+    color: #00ffff;
+    margin-top: 10px;
+}
+
+.menu-container {
+    padding: 40px;
+}
+
+.menu-card.active {
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+#contenido {
+    background: rgba(20, 20, 20, 0.6);
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    min-height: 300px;
+}
+
+.form-check-label {
+    color: white;
+}
+
+@keyframes pulseAlert {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 255, 255, 0.4);
+    }
+
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 255, 255, 0.4);
+    }
+}
+
+.alert-pulse {
+    animation: pulseAlert 3s infinite;
+    background: linear-gradient(135deg,
+            rgba(0, 255, 255, 0.1),
+            rgba(0, 0, 0, 0.7));
+    color: #ffffff !important;
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.6);
+}
+
+.custom-modal {
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    color: white;
+}
+
+.modal-title {
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+}
+
+.mensaje-exitoso {
+    background: rgba(0, 255, 255, 0.1);
+    color: #00ffff;
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.mensaje-fallido {
+    background: rgba(220, 53, 69, 0.15);
+    color: #ff6b6b;
+    border: 1px solid rgba(220, 53, 69, 0.5);
+    border-left: 4px solid #ff4d4d;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.tabla-gamer {
+    background: rgba(20,20,20,0.7);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0,255,255,0.2);
+}
+
+.tabla-gamer thead {
+    background: rgba(0,255,255,0.1);
+    color: #00ffff;
+}
+
+.tabla-gamer th, 
+.tabla-gamer td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tabla-gamer tbody tr {
+    transition: all 0.3s ease;
+}
+
+.tabla-gamer tbody tr:hover {
+    background: rgba(0,255,255,0.08);
+    transform: scale(1.01);
+}
+
+.btn-gamer {
+    background: rgba(0,255,255,0.2);
+    color: #00ffff;
+    border: 1px solid rgba(0,255,255,0.5);
+}
+
+.btn-gamer:hover {
+    background: #00ffff;
+    color: black;
+}
+
+@keyframes successAnim {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.success-anim {
+    animation: successAnim 0.4s ease;
+    box-shadow: 0 0 15px rgba(0,255,255,0.5);
+}
+
+.card input:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 8px rgba(0,255,255,0.5);
+}
+
+.form-check-input:checked {
+    background-color: #00ffff;
+    border-color: #00ffff;
+}
+
+/* 🎯 Contenedor más compacto */
+.form-container {
+    max-width: 650px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,255,255,0.3);
+    box-shadow: 0 0 15px rgba(0,255,255,0.2);
+}
+
+/* Inputs más elegantes */
+.form-control {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,255,255,0.2);
+    color: white;
+}
+
+/* Focus gamer */
+.form-control:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 8px rgba(0,255,255,0.5);
+}
+
+/* Switch */
+.form-check-input:checked {
+    background-color: #00ffff;
+    border-color: #00ffff;
+}
+
+.form-select {
+    background: rgba(20,20,20,0.9);
+    color: #ffffff;
+    border: 1px solid rgba(0,255,255,0.3);
+}
+
+.form-select:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 8px rgba(0,255,255,0.5);
+}
+
+/* 🔥 opciones */
+.form-select option {
+    background: #121212;
+    color: #ffffff;
+}
+
+.card {
+    border: 1px solid rgba(0,255,255,0.2);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,255,255,0.2);
+}
+
+/* 🎮 Tema cyan global */
+.text-cyan {
+    color: #00ffff !important;
+}
+
+.card h6,
+.card p,
+.card li {
+    color: #00ffff;
+}
+
+/* lista dropdown */
+.list-group-item {
+    background: rgba(20,20,20,0.9);
+    color: #00ffff;
+    border: 1px solid rgba(0,255,255,0.2);
+}
+
+.accordion-button {
+    border: 1px solid rgba(0,255,255,0.2);
+}
+
+.accordion-button:not(.collapsed) {
+    background: rgba(0,255,255,0.1);
+    color: #00ffff;
+}
+
+.accordion-body {
+    background: rgba(10,10,10,0.9);
+}
+
+.form-control {
+    background: rgba(255,255,255,0.05);
+    color: #00ffff; /* texto cyan */
+    border: 1px solid rgba(0,255,255,0.2);
+}
+
+/* focus */
+.form-control:focus {
+    background: rgba(255,255,255,0.08);
+    color: #00ffff;
+    border-color: #00ffff;
+    box-shadow: 0 0 8px rgba(0,255,255,0.5);
+}
+
+/* placeholder */
+.form-control::placeholder {
+    color: rgba(0, 255, 255, 0.6);
+}
