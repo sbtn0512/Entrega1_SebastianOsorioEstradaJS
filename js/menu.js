@@ -6,7 +6,7 @@ const contenedor = document.querySelector('#menuOpciones');
 
 const usuariosSistema = JSON.parse(sessionStorage.getItem('usuarios'));
 const usuarioLogueado = devolverUsuario();
-const inventarioVideojuegos = [];
+let inventarioVideojuegos = [];
 
 // Opciones por rol
 const opciones = {
@@ -43,22 +43,14 @@ function Videojuegos(id, nombre, anio, genero, plataforma, cuentaOnline, existen
 }
 
 // Videojuegos habilitados en el sistema
-
-inventarioVideojuegos.push(new Videojuegos(1, 'the legend of zelda: breath of the wild', 2017, 'aventura', 'nintendo switch', false, 14, 220000, false));
-inventarioVideojuegos.push(new Videojuegos(2, 'grand theft auto v', 2013, 'acción', 'ps5', true, 7, 180000, false));
-inventarioVideojuegos.push(new Videojuegos(3, 'minecraft', 2011, 'sandbox', 'pc', true, 19, 120000, true));
-inventarioVideojuegos.push(new Videojuegos(4, 'fifa 23', 2022, 'deportes', 'ps5', true, 3, 210000, true));
-inventarioVideojuegos.push(new Videojuegos(5, 'the witcher 3: wild hunt', 2015, 'rpg', 'pc', false, 11, 90000, false));
-inventarioVideojuegos.push(new Videojuegos(6, 'sekiro: shadows die twice', 2019, 'acción-aventura', 'ps5', false, 12, 200000, true));
-inventarioVideojuegos.push(new Videojuegos(7, 'among us', 2018, 'party', 'pc', true, 16, 20000, true));
-inventarioVideojuegos.push(new Videojuegos(8, 'hollow knight', 2017, 'metroidvania', 'pc', false, 9, 60000, true));
-inventarioVideojuegos.push(new Videojuegos(9, 'animal crossing: new horizons', 2020, 'simulación', 'nintendo switch', true, 2, 230000, false));
-inventarioVideojuegos.push(new Videojuegos(10, 'red dead redemption 2', 2018, 'acción-aventura', 'xbox one', true, 18, 150000, true));
-inventarioVideojuegos.push(new Videojuegos(11, 'celeste', 2018, 'plataformas', 'pc', false, 6, 50000, true));
-inventarioVideojuegos.push(new Videojuegos(12, 'resident evil 4 remake', 2023, 'survival horror', 'ps5', false, 13, 250000, true));
-inventarioVideojuegos.push(new Videojuegos(13, 'elden ring', 2022, 'rpg', 'pc', true, 0, 230000, true));
-inventarioVideojuegos.push(new Videojuegos(14, 'forza horizon 5', 2021, 'carreras', 'xbox series x', true, 17, 240000, true));
-inventarioVideojuegos.push(new Videojuegos(15, 'stardew valley', 2016, 'simulación', 'pc', true, 8, 45000, true));
+fetch('../data/inventario-de-juegos.json')
+    .then(response => response.json())
+    .then(data => {        
+        inventarioVideojuegos = data.inventarioVideojuegos;
+    })
+    .catch(error => {
+        console.error("Error cargando el inventario de videojuegos:", error);
+    });
 
 function devolverUsuario() {
     // Mostrar usuario

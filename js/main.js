@@ -18,17 +18,62 @@ function Usuario(id, usuario, clave, rol, carritoPendiente = []) {
     this.carritoPendiente = carritoPendiente;
 }
 
-// Creación de objetos
-
-const usuariosSistema = [];
-
 // Llenado por defecto de objetos (Inicial)
 
 // Usuarios habilitados en el sistema
-usuariosSistema.push(new Usuario(1, 'cliente', '1234', 'cliente'))
-usuariosSistema.push(new Usuario(1, 'cliente2', '1234', 'cliente', ['sekiro: shadows die twice', 'minecraft', 'grand theft auto v']))
-usuariosSistema.push(new Usuario(2, 'vendedor', '4321', 'vendedor'))
-usuariosSistema.push(new Usuario(3, 'admin', '3412', 'admin'))
+let usuariosSistema = [];
+
+fetch('./data/data-usuarios.json')
+    .then(response => response.json())
+    .then(data => {
+        usuariosSistema = data.usuariosSistema;
+        toastGamer("Se cargaron con exito los usuarios", "success");
+        toastGamer("Usuarios disponibles: \n" + usuariosSistema.map(u => u.usuario + " - " + u.clave).join("\n"));
+    })
+    .catch(error => {
+        toastGamer("Error cargando el JSON", "error");
+    });
+
+// Funcion toastify para mostrar mensajes de error o éxito
+
+
+function toastGamer(mensaje, tipo = "info") {
+  let bg = "linear-gradient(135deg, rgba(0,255,255,0.15), rgba(0,0,0,0.9))";
+  let border = "1px solid rgba(0,255,255,0.4)";
+  let color = "#00ffff";
+  let duracion = 10000;
+
+  if (tipo === "error") {
+    duracion = 3000;
+    bg = "linear-gradient(135deg, rgba(255,0,0,0.15), rgba(0,0,0,0.9))";
+    border = "1px solid rgba(255,0,0,0.5)";
+    color = "#ff6b6b";
+  }
+
+  if (tipo === "success") {
+    duracion = 3000;
+    bg = "linear-gradient(135deg, rgba(0,255,255,0.2), rgba(0,0,0,0.9))";
+    border = "1px solid #00ffff";
+    color = "#00ffff";
+  }
+
+  Toastify({
+    text: mensaje,
+    duration: duracion,
+    gravity: "top",
+    position: "right",
+    close: true,
+    style: {
+      background: bg,
+      color: color,
+      border: border,
+      borderRadius: "12px",
+      backdropFilter: "blur(6px)",
+      boxShadow: "0 0 15px rgba(0,255,255,0.4)",
+      textShadow: "0 0 5px rgba(0,255,255,0.7)"
+    }
+  }).showToast();
+}
 
 // Inicio del programa
 

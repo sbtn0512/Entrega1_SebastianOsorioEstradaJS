@@ -1,0 +1,169 @@
+{
+  "inventarioVideojuegos": [
+    {
+      "id": 1,
+      "nombre": "the legend of zelda: breath of the wild",
+      "anio": 2017,
+      "genero": "aventura",
+      "plataforma": "nintendo switch",
+      "cuentaOnline": false,
+      "existencias": 14,
+      "precio": 220000,
+      "ingresoSistema": false
+    },
+    {
+      "id": 2,
+      "nombre": "grand theft auto v",
+      "anio": 2013,
+      "genero": "acción",
+      "plataforma": "ps5",
+      "cuentaOnline": true,
+      "existencias": 7,
+      "precio": 180000,
+      "ingresoSistema": false
+    },
+    {
+      "id": 3,
+      "nombre": "minecraft",
+      "anio": 2011,
+      "genero": "sandbox",
+      "plataforma": "pc",
+      "cuentaOnline": true,
+      "existencias": 19,
+      "precio": 120000,
+      "ingresoSistema": true
+    },
+    {
+      "id": 4,
+      "nombre": "fifa 23",
+      "anio": 2022,
+      "genero": "deportes",
+      "plataforma": "ps5",
+      "cuentaOnline": true,
+      "existencias": 3,
+      "precio": 210000,
+      "ingresoSistema": true
+    },
+    {
+      "id": 5,
+      "nombre": "the witcher 3: wild hunt",
+      "anio": 2015,
+      "genero": "rpg",
+      "plataforma": "pc",
+      "cuentaOnline": false,
+      "existencias": 11,
+      "precio": 90000,
+      "ingresoSistema": false
+    },
+    {
+      "id": 6,
+      "nombre": "sekiro: shadows die twice",
+      "anio": 2019,
+      "genero": "acción-aventura",
+      "plataforma": "ps5",
+      "cuentaOnline": false,
+      "existencias": 12,
+      "precio": 200000,
+      "ingresoSistema": true
+    },
+    {
+      "id": 7,
+      "nombre": "among us",
+      "anio": 2018,
+      "genero": "party",
+      "plataforma": "pc",
+      "cuentaOnline": true,
+      "existencias": 16,
+      "precio": 20000,
+      "ingresoSistema": true
+    },
+    {
+      "id": 8,
+      "nombre": "hollow knight",
+      "anio": 2017,
+      "genero": "metroidvania",
+      "plataforma": "pc",
+      "cuentaOnline": false,
+      "existencias": 9,
+      "precio": 60000,
+      "ingresoSistema": true
+    },
+    {
+      "id": 9,
+      "nombre": "animal crossing: new horizons",
+      "anio": 2020,
+      "genero": "simulación",
+      "plataforma": "nintendo switch",
+      "cuentaOnline": true,
+      "existencias": 2,
+      "precio": 230000,
+      "ingresoSistema": false
+    },
+    {
+      "id": 10,
+      "nombre": "red dead redemption 2",
+      "anio": 2018,
+      "genero": "acción-aventura",
+      "plataforma": "xbox one",
+      "cuentaOnline": true,
+      "existencias": 18,
+      "precio": 150000,
+      "ingresoSistema": true
+    },
+    {
+      "id": 11,
+      "nombre": "celeste",
+      "anio": 2018,
+      "genero": "plataformas",
+      "plataforma": "pc",
+      "cuentaOnline": false,
+      "existencias": 6,
+      "precio": 50000,
+      "ingresoSistema": true
+    },
+    {
+      "id": 12,
+      "nombre": "resident evil 4 remake",
+      "anio": 2023,
+      "genero": "survival horror",
+      "plataforma": "ps5",
+      "cuentaOnline": false,
+      "existencias": 13,
+      "precio": 250000,
+      "ingresoSistema": true
+    },
+    {
+      "id": 13,
+      "nombre": "elden ring",
+      "anio": 2022,
+      "genero": "rpg",
+      "plataforma": "pc",
+      "cuentaOnline": true,
+      "existencias": 0,
+      "precio": 230000,
+      "ingresoSistema": true
+    },
+    {
+      "id": 14,
+      "nombre": "forza horizon 5",
+      "anio": 2021,
+      "genero": "carreras",
+      "plataforma": "xbox series x",
+      "cuentaOnline": true,
+      "existencias": 17,
+      "precio": 240000,
+      "ingresoSistema": true
+    },
+    {
+      "id": 15,
+      "nombre": "stardew valley",
+      "anio": 2016,
+      "genero": "simulación",
+      "plataforma": "pc",
+      "cuentaOnline": true,
+      "existencias": 8,
+      "precio": 45000,
+      "ingresoSistema": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "usuariosSistema": [
+    {
+      "id": 1,
+      "usuario": "cliente",
+      "clave": "1234",
+      "rol": "cliente",
+      "carritoPendiente": []
+    },
+    {
+      "id": 2,
+      "usuario": "cliente2",
+      "clave": "1234",
+      "rol": "cliente",
+      "carritoPendiente": [
+        "sekiro: shadows die twice",
+        "minecraft",
+        "grand theft auto v"
+      ]
+    },
+    {
+      "id": 3,
+      "usuario": "vendedor",
+      "clave": "4321",
+      "rol": "vendedor",
+      "carritoPendiente": []
+    },
+    {
+      "id": 4,
+      "usuario": "admin",
+      "clave": "3412",
+      "rol": "admin",
+      "carritoPendiente": []
+    }
+  ]
+}
